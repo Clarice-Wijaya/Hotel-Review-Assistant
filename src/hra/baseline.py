@@ -5,8 +5,6 @@ from sklearn.linear_model import LogisticRegression
 
 
 class TfidfAspectModel:
-    """TF-IDF features shared by all aspects, one logistic regression per aspect."""
-
     def __init__(self, C=4.0):
         self.C = C
         self.words = TfidfVectorizer(ngram_range=(1, 2), min_df=2, sublinear_tf=True)

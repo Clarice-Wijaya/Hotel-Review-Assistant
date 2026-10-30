@@ -9,7 +9,6 @@ def prf(tp, fp, fn):
 
 
 def evaluate(y_true, y_pred):
-    """Pair = aspect and polarity both right. Detection = aspect found, polarity ignored."""
     y_true, y_pred = np.asarray(y_true), np.asarray(y_pred)
     true_m, pred_m = y_true > 0, y_pred > 0
 

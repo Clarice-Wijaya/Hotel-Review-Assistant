@@ -1,5 +1,3 @@
-"""TF-IDF + logistic regression baseline. C is picked on val, test is scored once."""
-
 import argparse
 import json
 import time
@@ -47,10 +45,10 @@ def main():
     result["ms_per_review"] = round(ms, 3)
 
     Path("reports").mkdir(exist_ok=True)
-    Path("reports/baseline_tfidf.json").write_text(json.dumps(result, indent=2, ensure_ascii=False))
+    Path("reports/baseline_tfidf.json").write_text(json.dumps(result, indent=2, ensure_ascii=False) + "\n")
     Path("models").mkdir(exist_ok=True)
     joblib.dump(model, "models/tfidf_baseline.joblib")
-    print(json.dumps(result, indent=2, ensure_ascii=False))
+    print(json.dumps(result, indent=2, ensure_ascii=False) + "\n")
 
 
 if __name__ == "__main__":

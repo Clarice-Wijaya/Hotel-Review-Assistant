@@ -16,7 +16,6 @@ CLASSES = ["N/A", "POSITIF", "NEGATIF", "NETRAL"]
 
 
 def read_jsonl(file_path):
-    """Baca file .jsonl, kembalikan list of dict."""
     records = []
     with open(file_path, encoding="utf-8") as f:
         for line in f:
@@ -26,7 +25,6 @@ def read_jsonl(file_path):
 
 
 def load_split(name, data_dir=Path("data/raw")):
-    """name: 'train', 'val', 'test', atau 'corpus' → list of dict dari file yang sesuai."""
     file_mapping = {
         "train": "train_silver.jsonl",
         "val": "val_gold.jsonl",
@@ -40,7 +38,6 @@ def load_split(name, data_dir=Path("data/raw")):
 
 
 def to_matrix(records):
-    """List of review → numpy array (jumlah review, 7) berisi angka 0-3."""
     y = np.zeros((len(records), len(ASPECTS)), dtype=int)
     for i, record in enumerate(records):
         for lab in record.get("labels", []):
