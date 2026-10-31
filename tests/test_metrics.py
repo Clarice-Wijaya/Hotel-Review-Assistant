@@ -34,3 +34,12 @@ def test_half_right():
     m = evaluate(y, pred)["pair"]
     assert m["precision"] == 0.5
     assert m["recall"] == 0.5
+
+
+def test_majority_vote():
+    from hra.metrics import majority_vote
+
+    a, b, c = np.array([[1, 0]]), np.array([[1, 2]]), np.array([[2, 1]])
+    labels, agreed = majority_vote([a, b, c])
+    assert labels[0, 0] == 1 and agreed[0, 0]
+    assert labels[0, 1] == 0 and not agreed[0, 1]

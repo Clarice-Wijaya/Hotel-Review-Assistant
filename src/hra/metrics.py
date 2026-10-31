@@ -19,3 +19,10 @@ def evaluate(y_true, y_pred):
     detection = prf(tp, pred_m.sum() - tp, true_m.sum() - tp)
 
     return {"pair": pair, "detection": detection}
+
+
+def majority_vote(label_matrices):
+    stack = np.stack(label_matrices)
+    counts = np.stack([(stack == c).sum(0) for c in range(4)], axis=-1)
+    agreed = counts.max(-1) * 2 > len(label_matrices)
+    return np.where(agreed, counts.argmax(-1), 0), agreed
