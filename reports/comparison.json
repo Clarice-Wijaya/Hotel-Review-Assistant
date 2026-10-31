@@ -1,0 +1,23 @@
+{
+  "Human, blind majority": {
+    "blind_vs_gold": 0.7534
+  },
+  "Gemini Flash (dataset draft)": {
+    "pair_f1": 0.8718,
+    "detection_f1": 0.9418,
+    "subset_vs_gold": 0.8843,
+    "subset_vs_blind": 0.7554
+  },
+  "TF-IDF + LR": {
+    "pair_f1": 0.7306,
+    "detection_f1": 0.8429,
+    "subset_vs_gold": 0.7461,
+    "subset_vs_blind": 0.6881
+  },
+  "IndoBERT": {
+    "pair_f1": 0.7768,
+    "detection_f1": 0.8842,
+    "subset_vs_gold": 0.7861,
+    "subset_vs_blind": 0.7169
+  }
+}

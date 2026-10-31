@@ -49,6 +49,23 @@ Details: [reports/baseline_tfidf.json](reports/baseline_tfidf.json),
 [reports/indobert.json](reports/indobert.json).
 
 
+   ### How fair is the gold test?
+
+   The training labels were drafted by Gemini Flash, and the gold labels were made by people
+   correcting that draft. 100 test reviews were also re-labelled blind (no draft shown).
+   On those reviews ([reports/comparison.md](reports/comparison.md)):
+
+   | Model | Pair F1 vs gold | Pair F1 vs blind |
+   |---|---|---|
+   | Gemini Flash (the dataset's draft) | 0.884 | 0.755 |
+   | IndoBERT (this repo) | 0.786 | 0.717 |
+   | TF-IDF baseline | 0.746 | 0.688 |
+
+   Gemini drops the most, because gold started from its own answers. Against blind labels the
+   gap between Gemini and IndoBERT shrinks from 0.10 to 0.04, while IndoBERT runs locally
+   with no API cost. With only 97 reviews, differences of a few points are within noise.
+
+
 ## Run
 
 ```bash
