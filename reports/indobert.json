@@ -1,0 +1,197 @@
+{
+  "encoder": "indobenchmark/indobert-base-p1",
+  "device": "cuda",
+  "transformers": "5.21.0",
+  "settings": {
+    "encoder": "indobenchmark/indobert-base-p1",
+    "epochs": 6,
+    "batch": 16,
+    "lr": 3e-05,
+    "head_lr": 0.001,
+    "max_length": 256,
+    "seeds": [
+      13,
+      42,
+      2026
+    ]
+  },
+  "test_pair_f1_mean": 0.7712,
+  "test_pair_f1_std": 0.0068,
+  "saved_seed": 2026,
+  "runs": [
+    {
+      "seed": 13,
+      "val_pair_f1": 0.7591,
+      "test": {
+        "pair": {
+          "precision": 0.7734,
+          "recall": 0.7504,
+          "f1": 0.7617
+        },
+        "detection": {
+          "precision": 0.8944,
+          "recall": 0.8678,
+          "f1": 0.8809
+        },
+        "per_aspect_pair_f1": {
+          "Lokasi": 0.7382,
+          "Kebersihan": 0.7645,
+          "Pelayanan": 0.8289,
+          "Kamar & Fasilitas": 0.8,
+          "Harga": 0.7213,
+          "Makanan & Minuman": 0.6944,
+          "Fasilitas Pendukung": 0.6352
+        }
+      },
+      "history": [
+        {
+          "epoch": 1,
+          "loss": 0.8978,
+          "val_pair_f1": 0.6717
+        },
+        {
+          "epoch": 2,
+          "loss": 0.5054,
+          "val_pair_f1": 0.7443
+        },
+        {
+          "epoch": 3,
+          "loss": 0.3195,
+          "val_pair_f1": 0.7358
+        },
+        {
+          "epoch": 4,
+          "loss": 0.1869,
+          "val_pair_f1": 0.7591
+        },
+        {
+          "epoch": 5,
+          "loss": 0.1088,
+          "val_pair_f1": 0.7583
+        },
+        {
+          "epoch": 6,
+          "loss": 0.062,
+          "val_pair_f1": 0.7487
+        }
+      ],
+      "ms_per_review": 16.5
+    },
+    {
+      "seed": 42,
+      "val_pair_f1": 0.7626,
+      "test": {
+        "pair": {
+          "precision": 0.781,
+          "recall": 0.7694,
+          "f1": 0.7752
+        },
+        "detection": {
+          "precision": 0.8918,
+          "recall": 0.8785,
+          "f1": 0.8851
+        },
+        "per_aspect_pair_f1": {
+          "Lokasi": 0.7203,
+          "Kebersihan": 0.7616,
+          "Pelayanan": 0.8544,
+          "Kamar & Fasilitas": 0.8066,
+          "Harga": 0.7615,
+          "Makanan & Minuman": 0.6796,
+          "Fasilitas Pendukung": 0.6914
+        }
+      },
+      "history": [
+        {
+          "epoch": 1,
+          "loss": 0.8977,
+          "val_pair_f1": 0.7069
+        },
+        {
+          "epoch": 2,
+          "loss": 0.5168,
+          "val_pair_f1": 0.7
+        },
+        {
+          "epoch": 3,
+          "loss": 0.3253,
+          "val_pair_f1": 0.7254
+        },
+        {
+          "epoch": 4,
+          "loss": 0.1906,
+          "val_pair_f1": 0.7469
+        },
+        {
+          "epoch": 5,
+          "loss": 0.111,
+          "val_pair_f1": 0.7626
+        },
+        {
+          "epoch": 6,
+          "loss": 0.0617,
+          "val_pair_f1": 0.7513
+        }
+      ],
+      "ms_per_review": 16.2
+    },
+    {
+      "seed": 2026,
+      "val_pair_f1": 0.7629,
+      "test": {
+        "pair": {
+          "precision": 0.7888,
+          "recall": 0.7653,
+          "f1": 0.7768
+        },
+        "detection": {
+          "precision": 0.8978,
+          "recall": 0.8711,
+          "f1": 0.8842
+        },
+        "per_aspect_pair_f1": {
+          "Lokasi": 0.7059,
+          "Kebersihan": 0.7538,
+          "Pelayanan": 0.8566,
+          "Kamar & Fasilitas": 0.8126,
+          "Harga": 0.7288,
+          "Makanan & Minuman": 0.7379,
+          "Fasilitas Pendukung": 0.6942
+        }
+      },
+      "history": [
+        {
+          "epoch": 1,
+          "loss": 0.8942,
+          "val_pair_f1": 0.7125
+        },
+        {
+          "epoch": 2,
+          "loss": 0.5107,
+          "val_pair_f1": 0.7057
+        },
+        {
+          "epoch": 3,
+          "loss": 0.3192,
+          "val_pair_f1": 0.7437
+        },
+        {
+          "epoch": 4,
+          "loss": 0.1847,
+          "val_pair_f1": 0.7522
+        },
+        {
+          "epoch": 5,
+          "loss": 0.0997,
+          "val_pair_f1": 0.7629
+        },
+        {
+          "epoch": 6,
+          "loss": 0.056,
+          "val_pair_f1": 0.7583
+        }
+      ],
+      "ms_per_review": 16.22
+    }
+  ]
+}
